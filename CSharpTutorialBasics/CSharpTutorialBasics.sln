@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial11", "CSharpT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial12", "CSharpTutorial12\CSharpTutorial12.csproj", "{C91163CD-DC50-4863-9B14-D7380241840D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial13", "CSharpTutorial13\CSharpTutorial13.csproj", "{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C91163CD-DC50-4863-9B14-D7380241840D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C91163CD-DC50-4863-9B14-D7380241840D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C91163CD-DC50-4863-9B14-D7380241840D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
