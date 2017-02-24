@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial1", "CSharpTutorial1\CSharpTutorial1.csproj", "{A3C3FCF1-0AA3-43B1-A7ED-3D02F7A0C4AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial01", "CSharpTutorial1\CSharpTutorial01.csproj", "{A3C3FCF1-0AA3-43B1-A7ED-3D02F7A0C4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial2", "CSharpTutorial2\CSharpTutorial2.csproj", "{1DC50BB8-C121-4747-8430-C0D51FCBBC1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial02", "CSharpTutorial2\CSharpTutorial02.csproj", "{1DC50BB8-C121-4747-8430-C0D51FCBBC1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial3", "CSharpTutorial3\CSharpTutorial3.csproj", "{EB77E0FC-859F-4165-82CB-5EE5293D02B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial03", "CSharpTutorial3\CSharpTutorial03.csproj", "{EB77E0FC-859F-4165-82CB-5EE5293D02B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial4", "CSharpTutorial4\CSharpTutorial4.csproj", "{99180AE3-B3FA-44A9-99FF-C2721E14BEFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial04", "CSharpTutorial4\CSharpTutorial04.csproj", "{99180AE3-B3FA-44A9-99FF-C2721E14BEFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial5", "CSharpTutorial5\CSharpTutorial5.csproj", "{5CFD53C4-2BFD-41E8-B4A7-585F9243B2EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial05", "CSharpTutorial5\CSharpTutorial05.csproj", "{5CFD53C4-2BFD-41E8-B4A7-585F9243B2EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial6", "CSharpTutorial6\CSharpTutorial6.csproj", "{97DC3FA7-AF45-43B5-94A6-6039C6FB8281}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial06", "CSharpTutorial6\CSharpTutorial06.csproj", "{97DC3FA7-AF45-43B5-94A6-6039C6FB8281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial7", "CSharpTutorial7\CSharpTutorial7.csproj", "{65AF0C23-053E-4B69-B81E-37851FB936EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial07", "CSharpTutorial7\CSharpTutorial07.csproj", "{65AF0C23-053E-4B69-B81E-37851FB936EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial8", "CSharpTutorial8\CSharpTutorial8.csproj", "{6397FCEB-6B8D-40C4-BAE6-7B5FC0BFC717}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial08", "CSharpTutorial8\CSharpTutorial08.csproj", "{6397FCEB-6B8D-40C4-BAE6-7B5FC0BFC717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial9", "CSharpTutorial9\CSharpTutorial9.csproj", "{96D17AFA-EE49-4F85-AF50-18420D591D28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial09", "CSharpTutorial9\CSharpTutorial09.csproj", "{96D17AFA-EE49-4F85-AF50-18420D591D28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial10", "CSharpTutorial10\CSharpTutorial10.csproj", "{88860149-C8F3-4952-889F-BB67933F8D77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{96D17AFA-EE49-4F85-AF50-18420D591D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D17AFA-EE49-4F85-AF50-18420D591D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D17AFA-EE49-4F85-AF50-18420D591D28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88860149-C8F3-4952-889F-BB67933F8D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88860149-C8F3-4952-889F-BB67933F8D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88860149-C8F3-4952-889F-BB67933F8D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88860149-C8F3-4952-889F-BB67933F8D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
