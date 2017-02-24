@@ -11,8 +11,7 @@ namespace CSharpTutorial10
         static void Main(string[] args)
         {
             // Create a Vehicle object
-            Vehicle buick = new Vehicle("Buick",
-                4, 160);
+            Vehicle buick = new Vehicle("Buick", 4, 160);
 
             // Check if Vehicle implements 
             // IDrivable
