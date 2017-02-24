@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial12", "CSharpT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial13", "CSharpTutorial13\CSharpTutorial13.csproj", "{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial14", "CSharpTutorial14\CSharpTutorial14.csproj", "{B52BAC6D-3E68-4B3C-8A6C-D5F35AD68E6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFCEDCB6-5B91-49C7-B4D1-FE85B8E07F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52BAC6D-3E68-4B3C-8A6C-D5F35AD68E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52BAC6D-3E68-4B3C-8A6C-D5F35AD68E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52BAC6D-3E68-4B3C-8A6C-D5F35AD68E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52BAC6D-3E68-4B3C-8A6C-D5F35AD68E6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
