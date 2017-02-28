@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{731090D2-30D4-4795-8314-A468FCE1A29B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReayonotAvoda</RootNamespace>
+    <AssemblyName>ReayonotAvoda</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\DesignPatterns\Other\MVC\MVC.cs" />
+    <Compile Include="Algorithms\DotNet\RALinq.cs" />
+    <Compile Include="Algorithms\Searching\BFS.cs" />
+    <Compile Include="Algorithms\Searching\DFS.cs" />
+    <Compile Include="Algorithms\Sorting\BubbleSort.cs" />
+    <Compile Include="Algorithms\Sorting\BucketSort.cs" />
+    <Compile Include="Algorithms\Sorting\Heapsort.cs" />
+    <Compile Include="Algorithms\Sorting\Insertion sort.cs" />
+    <Compile Include="Algorithms\Sorting\Merge sort.cs" />
+    <Compile Include="Algorithms\Sorting\QuickSort.cs" />
+    <Compile Include="Algorithms\Sorting\RadixSort.cs" />
+    <Compile Include="Algorithms\Sorting\SelectionSort.cs" />
+    <Compile Include="Algorithms\DesignPatterns\Creational\RASingelton\ThreadsafeSingelton.cs" />
+    <Compile Include="DataStructures\LinkedList\RALinkedList.cs" />
+    <Compile Include="DataStructures\LinkedList\RALinkedListNode.cs" />
+    <Compile Include="DataStructures\Trees\InOrder.cs" />
+    <Compile Include="DataStructures\Trees\PostOrder.cs" />
+    <Compile Include="DataStructures\Trees\PreOrder.cs" />
+    <Compile Include="DataStructures\Trees\WeightedBinaryOrdered.cs" />
+    <Compile Include="Problems\Arrays\Anagrams.cs" />
+    <Compile Include="Problems\Arrays\CheckIfAStringHasNoRecurring.cs" />
+    <Compile Include="Problems\Arrays\GetMostReacuringElement.cs" />
+    <Compile Include="Problems\Arrays\MergeSortedArrays.cs" />
+    <Compile Include="Problems\Arrays\ReplaceAllSpacesWithString.cs" />
+    <Compile Include="Problems\Arrays\ResetArrayToZeroAtOOfOne.cs" />
+    <Compile Include="Problems\Arrays\ReversingArrayOrder.cs" />
+    <Compile Include="Algorithms\DesignPatterns\Creational\RASingelton\RASingelton.cs" />
+    <Compile Include="Problems\Arrays\SetRowAndColumnToZeroInMatrix.cs" />
+    <Compile Include="Problems\Arrays\StringCompressor.cs" />
+    <Compile Include="Problems\Bits\IsAPowerOfTwo.cs" />
+    <Compile Include="Problems\Integers\SwapIntegersInPlace.cs" />
+    <Compile Include="Problems\LinkedList\FindLastFourNodes.cs" />
+    <Compile Include="Problems\Stacks\GetLargestElementInStack.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataStructures\Stack\RAStack.cs" />
+    <Compile Include="Questions\Basic.cs" />
+    <Compile Include="Questions\CSharpSystem.cs" />
+    <Compile Include="Questions\LinuxAndBash.cs" />
+    <Compile Include="Questions\LogicalQuestions.cs" />
+    <Compile Include="Questions\Maarchot.cs" />
+    <Compile Include="Questions\Reshatot.cs" />
+    <Compile Include="Questions\Threading.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Chain of Resp\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Command\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Interpreter\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Iterator\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Mediator\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Memento\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Observer\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\State\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Strategy\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Template Method\" />
+    <Folder Include="Algorithms\DesignPatterns\Behavioral\Visitor\" />
+    <Folder Include="Algorithms\DesignPatterns\Creational\Abstract Factory\" />
+    <Folder Include="Algorithms\DesignPatterns\Creational\Builder\" />
+    <Folder Include="Algorithms\DesignPatterns\Creational\Factory Method\" />
+    <Folder Include="Algorithms\DesignPatterns\Creational\Prototype\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Adapter\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Bridge\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Composite\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Decorator\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Facade\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Flyweight\" />
+    <Folder Include="Algorithms\DesignPatterns\Structural\Proxy\" />
+    <Folder Include="DataStructures\Hash\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

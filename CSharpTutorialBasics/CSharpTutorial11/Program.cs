@@ -171,7 +171,7 @@ namespace CSharpTutorial11
             #endregion
 
             // ---------- STACKS ----------
-            #region Queue Code
+            #region Stack Code
             // Stack Last in 1st Out Collection
 
             // Create a stack
