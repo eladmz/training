@@ -28,6 +28,7 @@ namespace Algorithms
                     }
                 }
             }
+            PrintArray(arr);
             return arr;
         }
 
@@ -56,6 +57,7 @@ namespace Algorithms
 
                 SwapValues<T>(ref arr, i, minimum);
             }
+            PrintArray(arr);
 
             return arr;
         }
@@ -86,6 +88,7 @@ namespace Algorithms
 
                 arr[j] = valToInsert;
             }
+            PrintArray(arr);
 
             return arr;
         }

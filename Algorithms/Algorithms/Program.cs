@@ -44,6 +44,18 @@ namespace Algorithms
             Console.WriteLine(stack);
             Console.WriteLine();
 
+            SortedLinkedList<int> sortedList = new SortedLinkedList<int>();
+            sortedList.Add(5);
+            sortedList.Add(1);
+            sortedList.Add(8);
+            sortedList.Add(6);
+            sortedList.Add(4);
+            sortedList.Add(10);
+            Console.WriteLine(sortedList);
+            sortedList.RemoveFirst();
+            sortedList.RemoveLast();
+            Console.WriteLine(sortedList);
+
             Console.ReadLine();
         }
     }
