@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial01", "Tutorial01\Tutorial01.csproj", "{BEB19384-5DB0-4FA9-B7E0-B8B0CAC7EBEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial01Service", "Tutorial01\Tutorial01Service.csproj", "{BEB19384-5DB0-4FA9-B7E0-B8B0CAC7EBEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial01Client", "Tutorial01Client\Tutorial01Client.csproj", "{8A4A37FD-C6AA-4B6B-974A-FD6BB0B6657B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BEB19384-5DB0-4FA9-B7E0-B8B0CAC7EBEB} = {BEB19384-5DB0-4FA9-B7E0-B8B0CAC7EBEB}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial02", "Tutorial02\Tutorial02.csproj", "{DBC0D139-FAB4-42DF-A6C0-93097D768206}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial02Service", "Tutorial02\Tutorial02Service.csproj", "{DBC0D139-FAB4-42DF-A6C0-93097D768206}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial02Host", "Tutorial02Host\Tutorial02Host.csproj", "{BEFDEDA1-95F6-4F53-BD82-4BCE593A44EF}"
 EndProject
