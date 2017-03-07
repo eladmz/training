@@ -110,5 +110,14 @@ namespace Grades.Tests.Types
 
             Assert.AreEqual(g1.Name, g2.Name);
         }
+
+        [TestMethod]
+        public void StringVariablesHoldAReference()
+        {
+            string greeting = "Hello, World";
+            string copy = greeting;
+
+            Assert.AreSame(greeting, copy);
+        }
     }
 }
