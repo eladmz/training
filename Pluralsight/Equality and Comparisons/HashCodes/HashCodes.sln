@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityComparer", "EqualityComparer\EqualityComparer.csproj", "{7E278643-882C-4149-95FE-0BE0E3956507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodNameEquality", "FoodNameEquality\FoodNameEquality.csproj", "{055B7197-88D6-4B29-BBED-9E3F180ECAF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E278643-882C-4149-95FE-0BE0E3956507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E278643-882C-4149-95FE-0BE0E3956507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E278643-882C-4149-95FE-0BE0E3956507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E278643-882C-4149-95FE-0BE0E3956507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055B7197-88D6-4B29-BBED-9E3F180ECAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055B7197-88D6-4B29-BBED-9E3F180ECAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055B7197-88D6-4B29-BBED-9E3F180ECAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055B7197-88D6-4B29-BBED-9E3F180ECAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

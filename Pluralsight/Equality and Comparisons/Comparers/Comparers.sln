@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InconsistentSorting", "InconsistentSorting\InconsistentSorting.csproj", "{B0D6FD04-4553-4033-906D-470EE28B0855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityComparer", "EqualityComparer\EqualityComparer.csproj", "{1944C572-5AD7-41EF-A977-196C1135E173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringComparers", "StringComparers\StringComparers.csproj", "{A100FE88-2142-4AA1-B000-1E22C5750072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0D6FD04-4553-4033-906D-470EE28B0855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D6FD04-4553-4033-906D-470EE28B0855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D6FD04-4553-4033-906D-470EE28B0855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D6FD04-4553-4033-906D-470EE28B0855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1944C572-5AD7-41EF-A977-196C1135E173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1944C572-5AD7-41EF-A977-196C1135E173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1944C572-5AD7-41EF-A977-196C1135E173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1944C572-5AD7-41EF-A977-196C1135E173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A100FE88-2142-4AA1-B000-1E22C5750072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A100FE88-2142-4AA1-B000-1E22C5750072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A100FE88-2142-4AA1-B000-1E22C5750072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A100FE88-2142-4AA1-B000-1E22C5750072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csproj", "{3B3C9DFC-8E97-4934-B5FA-8A504FDD6490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades.Tests", "Grades.Tests\Grades.Tests.csproj", "{F5BFA7AE-52C8-4BCF-857F-9F66FF96A091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B3C9DFC-8E97-4934-B5FA-8A504FDD6490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3C9DFC-8E97-4934-B5FA-8A504FDD6490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3C9DFC-8E97-4934-B5FA-8A504FDD6490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3C9DFC-8E97-4934-B5FA-8A504FDD6490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BFA7AE-52C8-4BCF-857F-9F66FF96A091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BFA7AE-52C8-4BCF-857F-9F66FF96A091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BFA7AE-52C8-4BCF-857F-9F66FF96A091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BFA7AE-52C8-4BCF-857F-9F66FF96A091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
