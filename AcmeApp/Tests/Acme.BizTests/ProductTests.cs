@@ -53,7 +53,7 @@ namespace Acme.Biz.Tests
                 ProductId = 1,
                 Description = "15-inch steel blade hand saw"
             };
-            
+
             string expected = "Hello Saw (1): 15-inch steel blade hand saw" + " Available on: ";
 
             //Act
@@ -276,10 +276,26 @@ namespace Acme.Biz.Tests
             // Arrange
             Product currentProduct = new Product();
 
-            string expected = "Tools-1";
+            string expected = "Tools-0001";
 
             // Act
             string actual = currentProduct.ProductCode;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void CalculateSuggestedPriceTest()
+        {
+            // Arrange
+            Product currentProduct = new Product(1, "Saw", "");
+            currentProduct.Cost = 50m;
+
+            decimal expected = 55m;
+
+            // Act
+            decimal actual = currentProduct.CalculateSuggestedPrice(10m);
 
             // Assert
             Assert.AreEqual(expected, actual);
