@@ -20,7 +20,7 @@ namespace Softimize
         public event CollectionChangedEventHandler CollectionChanged;
 
         /// <summary>
-        /// Creates instance of PersonCollection with comparer
+        /// Creates instance of PersonCollection with the given person comparer.
         /// </summary>
         /// <param name="personComparer">Specify how person objects will be ordered.</param>
         public PersonCollection(IComparer<Person> personComparer)
@@ -30,7 +30,7 @@ namespace Softimize
         }
 
         /// <summary>
-        /// Adds a person to the collection.
+        /// Adds a person to the sorted collection according to the comparer.
         /// </summary>
         /// <param name="person">The person to add to the collection.</param>
         public void Add(Person person)
