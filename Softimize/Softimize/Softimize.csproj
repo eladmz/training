@@ -43,7 +43,7 @@
     <Compile Include="CollectionChangedEventArgs.cs" />
     <Compile Include="Mocks\Comparers\FirstNameComparer.cs" />
     <Compile Include="Mocks\Comparers\IdComparer.cs" />
-    <Compile Include="Mocks\MyPerson.cs" />
+    <Compile Include="Mocks\Objects\MyPerson.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
