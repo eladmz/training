@@ -16,7 +16,7 @@ namespace AteraDevProject.Web
         {
             RouteTable.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}/{id}",
+                routeTemplate: "api/{controller}/{action}",
                 defaults: new { id = System.Web.Http.RouteParameter.Optional }
             );
         }

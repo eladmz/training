@@ -8,24 +8,53 @@ namespace AteraDevProject.DAL
 {
     public class DALManager
     {
-        public IEnumerable<Devices> GetAllDevices()
+        public async Task<IEnumerable<Devices>> GetAllDevices()
         {
-            using (AteraDevServerEntities context = new AteraDevServerEntities())
+            try
             {
-                var devices = context.Devices
-                    .Include("Owners").ToList();
+                var result = await Task.Run(() =>
+                {
+                    using (AteraDevServerEntities context = new AteraDevServerEntities())
+                    {
+                        var devices = context.Devices
+                            .Include("Owners").ToList();
 
-                return devices;
+                        return devices;
+                    }
+                });
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("DALManager.GetAllDevices Failed! Exception: " + e.Message);
+                return null;
             }
         }
 
-        public IEnumerable<Devices> GetDevicesByOwnerName(string ownerName)
+        public async Task<IEnumerable<Devices>> GetDevicesByOwnerName(string ownerName)
         {
-            using (AteraDevServerEntities context = new AteraDevServerEntities())
+            try
             {
-                var devices = context.Devices.Where(device => device.Owners.FullName == ownerName).ToList();
+                var result = await Task.Run(() =>
+                {
+                    using (AteraDevServerEntities context = new AteraDevServerEntities())
+                    {
+                        var devices = context.Devices
+                            .Include("Owners")
+                            .Where(device => string.Compare(device.Owners.FullName, ownerName, StringComparison.OrdinalIgnoreCase) == 0)
+                            .ToList();
 
-                return devices;
+                        return devices;
+                    }
+                });
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("DALManager.GetDevicesByOwnerName Failed! Exception: " + e.Message);
+                return null;
             }
         }
     }

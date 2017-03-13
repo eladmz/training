@@ -4,45 +4,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace AteraDevProject.Web
 {
     public class DevicesController : ApiController
     {
+        DALManager dal = new DALManager();
+
         [HttpGet]
-        public IEnumerable<Devices> GetAllDevices()
+        public async Task<IEnumerable<Devices>> GetAllDevices()
         {
-            var dal = new DALManager();
-            var devices = dal.GetAllDevices();
-            return devices;
+            try
+            {
+                var devices = await dal.GetAllDevices().ConfigureAwait(false);
+
+                return devices;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("DevicesController.GetAllDevices Failed! Exception: " + e.Message);
+                return null;
+            }
         }
 
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        [HttpPost]
+        public async Task<IEnumerable<Devices>> GetDevicesByOwnerName([FromBody]string name)
         {
-            return new string[] { "value1", "value2" };
-        }
+            try
+            {
+                var devices = await dal.GetDevicesByOwnerName(name).ConfigureAwait(false);
 
-        // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
+                return devices;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("DevicesController.GetDevicesByOwnerName Failed! Exception: " + e.Message);
+                return null;
+            }
         }
     }
 }

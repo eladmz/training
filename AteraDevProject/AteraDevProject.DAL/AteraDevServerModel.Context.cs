@@ -13,7 +13,7 @@ namespace AteraDevProject.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AteraDevServerEntities : DbContext
+    internal partial class AteraDevServerEntities : DbContext
     {
         public AteraDevServerEntities()
             : base("name=AteraDevServerEntities")
