@@ -8,7 +8,7 @@ namespace AteraDevProject.DAL
 {
     public class DALManager
     {
-        public async Task<IEnumerable<Devices>> GetAllDevices()
+        public async Task<ICollection<Devices>> GetAllDevices()
         {
             try
             {
@@ -16,8 +16,9 @@ namespace AteraDevProject.DAL
                 {
                     using (AteraDevServerEntities context = new AteraDevServerEntities())
                     {
-                        var devices = context.Devices
-                            .Include("Owners").ToList();
+                        context.Configuration.ProxyCreationEnabled = false;
+
+                        var devices = context.Devices.ToList();
 
                         return devices;
                     }
@@ -28,6 +29,7 @@ namespace AteraDevProject.DAL
             catch (Exception e)
             {
                 Console.WriteLine("DALManager.GetAllDevices Failed! Exception: " + e.Message);
+                Console.WriteLine(e.StackTrace);
                 return null;
             }
         }
@@ -40,6 +42,8 @@ namespace AteraDevProject.DAL
                 {
                     using (AteraDevServerEntities context = new AteraDevServerEntities())
                     {
+                        context.Configuration.ProxyCreationEnabled = false;
+
                         var devices = context.Devices
                             .Include("Owners")
                             .Where(device => string.Compare(device.Owners.FullName, ownerName, StringComparison.OrdinalIgnoreCase) == 0)
@@ -54,8 +58,34 @@ namespace AteraDevProject.DAL
             catch (Exception e)
             {
                 Console.WriteLine("DALManager.GetDevicesByOwnerName Failed! Exception: " + e.Message);
+                Console.WriteLine(e.StackTrace);
                 return null;
             }
+        }
+
+        public static string GenerateDeviceUniqueName(Devices device)
+        {
+            if (device == null)
+            {
+                throw new ArgumentNullException(nameof(device));
+            }
+            return string.Join("_", device.DeviceId, device.Name, device.Created, device.OwnerId);
+        }
+
+        public static int DaysSinceDeviceWasCreated(Devices device)
+        {
+            if (device == null)
+            {
+                throw new ArgumentNullException(nameof(device));
+            }
+
+            var now = DateTime.Now;
+
+            var timePassed = now.Subtract(device.Created);
+
+            Console.WriteLine(timePassed);
+
+            return (int)timePassed.TotalDays;
         }
     }
 }

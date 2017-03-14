@@ -14,17 +14,16 @@ namespace AteraDevProject.Web
         DALManager dal = new DALManager();
 
         [HttpGet]
-        public async Task<IEnumerable<Devices>> GetAllDevices()
+        public async Task<ICollection<Devices>> GetAllDevices()
         {
             try
             {
-                var devices = await dal.GetAllDevices().ConfigureAwait(false);
-
-                return devices;
+                return await dal.GetAllDevices().ConfigureAwait(false);
             }
             catch (Exception e)
             {
                 Console.WriteLine("DevicesController.GetAllDevices Failed! Exception: " + e.Message);
+                Console.WriteLine(e.StackTrace);
                 return null;
             }
         }
@@ -34,13 +33,12 @@ namespace AteraDevProject.Web
         {
             try
             {
-                var devices = await dal.GetDevicesByOwnerName(name).ConfigureAwait(false);
-
-                return devices;
+                return await dal.GetDevicesByOwnerName(name).ConfigureAwait(false);
             }
             catch (Exception e)
             {
                 Console.WriteLine("DevicesController.GetDevicesByOwnerName Failed! Exception: " + e.Message);
+                Console.WriteLine(e.StackTrace);
                 return null;
             }
         }

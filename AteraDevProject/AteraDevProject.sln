@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AteraDevProject.Web", "Ater
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AteraDevProject.DAL", "AteraDevProject.DAL\AteraDevProject.DAL.csproj", "{8DACDA8B-0816-42C1-BA6E-D8639FF1A08B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AteraDevProject.DAL.Tests", "AteraDevProject.DAL.Tests\AteraDevProject.DAL.Tests.csproj", "{2E6AA6CF-D3AA-4075-93DC-95A523E23136}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7F7B7762-0C37-4F42-9592-E1E781BE76DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{8DACDA8B-0816-42C1-BA6E-D8639FF1A08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DACDA8B-0816-42C1-BA6E-D8639FF1A08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DACDA8B-0816-42C1-BA6E-D8639FF1A08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6AA6CF-D3AA-4075-93DC-95A523E23136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6AA6CF-D3AA-4075-93DC-95A523E23136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6AA6CF-D3AA-4075-93DC-95A523E23136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6AA6CF-D3AA-4075-93DC-95A523E23136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E6AA6CF-D3AA-4075-93DC-95A523E23136} = {7F7B7762-0C37-4F42-9592-E1E781BE76DA}
 	EndGlobalSection
 EndGlobal

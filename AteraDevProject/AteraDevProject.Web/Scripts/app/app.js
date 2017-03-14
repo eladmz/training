@@ -1,0 +1,1 @@
+﻿var ateraApp = angular.module('ateraApp', []);
