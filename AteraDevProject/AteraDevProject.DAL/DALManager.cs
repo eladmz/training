@@ -18,7 +18,7 @@ namespace AteraDevProject.DAL
                     {
                         context.Configuration.ProxyCreationEnabled = false;
 
-                        var devices = context.Devices.ToList();
+                        var devices = context.Devices.Include("Owners").ToList();
 
                         return devices;
                     }

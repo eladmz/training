@@ -1,1 +1,1 @@
-﻿var ateraApp = angular.module('ateraApp', []);
+﻿var ateraApp = angular.module('ateraApp', ['ui.bootstrap']);
