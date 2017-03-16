@@ -32,5 +32,26 @@ namespace ACM.BL
             }    
         }
 
+        public Customer()
+        {
+            
+        }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName) || string.IsNullOrWhiteSpace(EmailAddress))
+            {
+                isValid = false;
+            }
+
+            return isValid;
+        }
     }
 }
