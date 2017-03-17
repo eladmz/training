@@ -12,6 +12,12 @@
             return $http.post(urlBase + '/Devices/GetDevicesByOwnerName', "=" + ownerName);
         };
 
+        this.getDevicesByOwnerCountry = function (ownerCountry) {
+            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+
+            return $http.post(urlBase + '/Devices/GetDevicesByOwnerCountry', "=" + ownerCountry);
+        };
+
         return this;
     }
 };

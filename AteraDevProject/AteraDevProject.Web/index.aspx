@@ -28,6 +28,14 @@
                 <div class="col-sm-3">
                     <button class="btn btn-default btn-block" ng-disabled="getByNameButtonDisabled" ng-click="getDevicesByOwnerName(ownerName)">Get Devices By Owner Name</button>
                 </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" ng-model="ownerCountry" placeholder="Owner Country" />
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-default btn-block" ng-disabled="getByCountryButtonDisabled" ng-click="getDevicesByOwnerCountry(ownerCountry)">Get Devices By Owner Country</button>
+                </div>
                 <div class="col-sm-3 col-sm-offset-3">
                     <button class="btn btn-default btn-block" ng-disabled="getAllButtonDisabled" ng-click="getAllDevices()">Get All Devices</button>
                 </div>
@@ -62,8 +70,8 @@
     <script src="Scripts/ui-bootstrap.min.js"></script>
 
     <!--app-->
-    <script src="Scripts/app/app.js"></script>
-    <script src="Scripts/app/factories.js"></script>
-    <script src="Scripts/app/controllers.js"></script>
+    <script src="Scripts/app/app.js?ver=1.00"></script>
+    <script src="Scripts/app/factories.js?ver=1.00"></script>
+    <script src="Scripts/app/controllers.js?ver=1.00"></script>
 </body>
 </html>

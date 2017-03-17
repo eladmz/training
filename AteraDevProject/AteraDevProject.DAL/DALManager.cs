@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace AteraDevProject.DAL
 {
+    /// <summary>
+    /// Provides functionality to work with the data source
+    /// </summary>
     public class DALManager
     {
-        public async Task<ICollection<Devices>> GetAllDevices()
+        /// <summary>
+        /// Get all the devices from the data source.
+        /// </summary>
+        /// <returns>Iterative collection of all the devices</returns>
+        public async Task<IEnumerable<Devices>> GetAllDevices()
         {
             try
             {
@@ -34,6 +41,11 @@ namespace AteraDevProject.DAL
             }
         }
 
+        /// <summary>
+        /// Get all the devices with the owner name from the data source.
+        /// </summary>
+        /// <param name="ownerName">The owner name of the devices</param>
+        /// <returns>Iterative collection of all the devices with the owner name</returns>
         public async Task<IEnumerable<Devices>> GetDevicesByOwnerName(string ownerName)
         {
             try
@@ -63,6 +75,45 @@ namespace AteraDevProject.DAL
             }
         }
 
+        /// <summary>
+        /// Get all the devices with the owner's country from the data source.
+        /// </summary>
+        /// <param name="ownerCountry">The owner's country name</param>
+        /// <returns>Iterative collection of all the devices from the owner's country</returns>
+        public async Task<IEnumerable<Devices>> GetDevicesByOwnerCountry(string ownerCountry)
+        {
+            try
+            {
+                var result = await Task.Run(() =>
+                {
+                    using (AteraDevServerEntities context = new AteraDevServerEntities())
+                    {
+                        context.Configuration.ProxyCreationEnabled = false;
+
+                        var devices = context.Devices
+                            .Include("Owners")
+                            .Where(device => string.Compare(device.Owners.Country, ownerCountry, StringComparison.OrdinalIgnoreCase) == 0)
+                            .ToList();
+
+                        return devices;
+                    }
+                });
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("DALManager.GetDevicesByOwnerCountry Failed! Exception: " + e.Message);
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Generates unique device name.
+        /// </summary>
+        /// <param name="device">The device to generate the unique string for</param>
+        /// <returns>Unique string of the device</returns>
         public static string GenerateDeviceUniqueName(Devices device)
         {
             if (device == null)
@@ -72,6 +123,11 @@ namespace AteraDevProject.DAL
             return string.Join("_", device.DeviceId, device.Name, device.Created, device.OwnerId);
         }
 
+        /// <summary>
+        /// Get the total days passed since the device was created.
+        /// </summary>
+        /// <param name="device">The device to get the days passed for</param>
+        /// <returns>Number of days passed since the device was created</returns>
         public static int DaysSinceDeviceWasCreated(Devices device)
         {
             if (device == null)
