@@ -27,10 +27,10 @@ namespace AteraDevProject.Web
             {
                 return await dal.GetAllDevices().ConfigureAwait(false);
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DevicesController.GetAllDevices Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine("DevicesController.GetAllDevices Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
                 return null;
             }
         }
@@ -47,10 +47,10 @@ namespace AteraDevProject.Web
             {
                 return await dal.GetDevicesByOwnerName(name).ConfigureAwait(false);
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DevicesController.GetDevicesByOwnerName Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine("DevicesController.GetDevicesByOwnerName Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
                 return null;
             }
         }
@@ -67,10 +67,10 @@ namespace AteraDevProject.Web
             {
                 return await dal.GetDevicesByOwnerCountry(ownerCountry).ConfigureAwait(false);
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DevicesController.GetDevicesByOwnerCountry Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine("DevicesController.GetDevicesByOwnerCountry Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
                 return null;
             }
         }

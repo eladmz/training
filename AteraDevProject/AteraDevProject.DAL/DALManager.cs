@@ -33,11 +33,11 @@ namespace AteraDevProject.DAL
 
                 return result;
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DALManager.GetAllDevices Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
-                return null;
+                Console.WriteLine("DALManager.GetAllDevices Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                throw;
             }
         }
 
@@ -67,11 +67,11 @@ namespace AteraDevProject.DAL
 
                 return result;
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DALManager.GetDevicesByOwnerName Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
-                return null;
+                Console.WriteLine("DALManager.GetDevicesByOwnerName Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                throw;
             }
         }
 
@@ -101,11 +101,11 @@ namespace AteraDevProject.DAL
 
                 return result;
             }
-            catch (Exception e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("DALManager.GetDevicesByOwnerCountry Failed! Exception: " + e.Message);
-                Console.WriteLine(e.StackTrace);
-                return null;
+                Console.WriteLine("DALManager.GetDevicesByOwnerCountry Failed! Exception: " + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                throw;
             }
         }
 
