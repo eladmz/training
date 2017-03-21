@@ -10,7 +10,7 @@ namespace SoftimizeMaster
     /// <summary>
     /// Represents the event data to pass to subscribers when the collection has changed.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The value of the element which caused the change.</typeparam>
     public class CollectionChangedEventArgs<T> : EventArgs
     {
         public ActionType Action { get; private set; }
