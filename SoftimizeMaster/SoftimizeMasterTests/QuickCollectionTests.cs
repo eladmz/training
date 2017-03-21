@@ -363,7 +363,7 @@ namespace SoftimizeMaster.Tests
 
             for (int i = 0; i < results.Length; i++)
             {
-                var collection = PopulateCollectionCollection(numOfElements[i]);
+                var collection = PopulateCollection(numOfElements[i]);
 
                 var tempResults = new double[measurementTimes];
                 for (int j = 0; j < measurementTimes; j++)
@@ -390,7 +390,7 @@ namespace SoftimizeMaster.Tests
 
             for (int i = 0; i < results.Length; i++)
             {
-                var collection = PopulateCollectionCollection(numOfElements[i]);
+                var collection = PopulateCollection(numOfElements[i]);
 
                 var tempResults = new double[measurementTimes];
                 for (int j = 0; j < measurementTimes; j++)
@@ -407,7 +407,7 @@ namespace SoftimizeMaster.Tests
             }
         }
 
-        private QuickCollection<int> PopulateCollectionCollection(int numOfElements)
+        private QuickCollection<int> PopulateCollection(int numOfElements)
         {
             var random = new Random();
             var maxRandValue = 50000;
