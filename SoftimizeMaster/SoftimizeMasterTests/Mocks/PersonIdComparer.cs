@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoftimizeMasterTests.Mocks
 {
+    /// <summary>
+    /// Mock person comparer for testing
+    /// </summary>
     public class PersonIdComparer : IComparer<Person>
     {
         private static PersonIdComparer instance = new PersonIdComparer();
