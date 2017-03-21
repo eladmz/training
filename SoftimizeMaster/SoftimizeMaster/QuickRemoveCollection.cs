@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace SoftimizeMaster
 {
+    /// <summary>
+    /// Represents strongly typed collection that quickly removes elements.
+    /// </summary>
+    /// <typeparam name="T">Specifies the element type of the collection.</typeparam>
     public class QuickRemoveCollection<T> : QuickCollection<T>
     {
         /// <summary>
@@ -17,6 +21,12 @@ namespace SoftimizeMaster
             this.comparer = comparer;
         }
 
+        /// <summary>
+        /// Adds an element to the sorted collection according to the comparer.
+        /// This operation has WC time complexity of O(n).
+        /// </summary>
+        /// <param name="element">The element to add to the collection.</param>
+        /// <returns></returns>
         protected override bool AddElement(T element)
         {
             if (Count == 0 || comparer.Compare(element, collection.First.Value) <= 0)
@@ -42,6 +52,11 @@ namespace SoftimizeMaster
             return true;
         }
 
+        /// <summary>
+        /// Removes the element with the maximum value and returns it.
+        /// This operation has WC time complexity of O(1).
+        /// </summary>
+        /// <returns>The element with the maximum value.</returns>
         protected override T RemoveElement()
         {
             T maxValue = collection.Last.Value;
