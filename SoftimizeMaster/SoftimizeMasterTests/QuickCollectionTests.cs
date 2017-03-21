@@ -1,11 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SoftimizeMasterTests.Mocks;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftimizeMaster.Tests
 {
@@ -254,7 +252,7 @@ namespace SoftimizeMaster.Tests
             var collection = GetInstance<int>(comparer);
             var random = new Random();
             var randomList = new List<int>();
-            var size = 1000;
+            var size = 10000;
             var maxRandValue = 50000;
 
             for (int i = 0; i < size; i++)
@@ -271,7 +269,8 @@ namespace SoftimizeMaster.Tests
             for (int i = randomList.Count - 1; i >= 0; i--)
             {
                 var actual = collection.Remove();
-                Assert.AreEqual(actual, randomList[i]);
+                var expected = randomList[i];
+                Assert.AreEqual(actual, expected);
             }
         }
 
@@ -355,42 +354,73 @@ namespace SoftimizeMaster.Tests
         [TestMethod()]
         public void Add_TimeComplexityTest()
         {
-            // Arrange
-            var comparer = Comparer<int>.Default;
-            var collection = GetInstance<int>(comparer);
             var random = new Random();
             var maxRandValue = 50000;
             var measurementTimes = 5;
 
-            int numOfElementsToAdd = 100000;
+            int[] numOfElements = { 10, 100, 1000, 10000, 100000 };
             var results = new double[measurementTimes];
 
             for (int i = 0; i < results.Length; i++)
             {
-                AddElementsToCollection(collection, numOfElementsToAdd, random, maxRandValue);
+                var collection = PopulateCollectionCollection(numOfElements[i]);
 
                 var tempResults = new double[measurementTimes];
                 for (int j = 0; j < measurementTimes; j++)
                 {
-                    var timeBefore = DateTime.Now;
+                    var watch = Stopwatch.StartNew();
                     collection.Add(random.Next(maxRandValue));
 
-                    var measuredTime = DateTime.Now - timeBefore;
-                    tempResults[j] = measuredTime.TotalMilliseconds;
+                    watch.Stop();
+                    tempResults[j] = watch.Elapsed.TotalMilliseconds;
                 }
 
                 results[i] = tempResults.Average();
-                Console.WriteLine("Number of elements: " + collection.Count + ", Add operation took: " + results[i] + " ms");
+                Console.WriteLine("Number of elements: " + numOfElements[i] + ", Add operation took: " + results[i] + " ms");
             }
         }
 
-        private void AddElementsToCollection(QuickCollection<int> collection, int numOfElements, Random random, int maxRandValue)
+        [TestMethod()]
+        public void Remove_TimeComplexityTest()
         {
+            var measurementTimes = 5;
+
+            int[] numOfElements = { 10, 100, 1000, 10000, 100000 };
+            var results = new double[measurementTimes];
+
+            for (int i = 0; i < results.Length; i++)
+            {
+                var collection = PopulateCollectionCollection(numOfElements[i]);
+
+                var tempResults = new double[measurementTimes];
+                for (int j = 0; j < measurementTimes; j++)
+                {
+                    var watch = Stopwatch.StartNew();
+                    collection.Remove();
+
+                    watch.Stop();
+                    tempResults[j] = watch.Elapsed.TotalMilliseconds;
+                }
+
+                results[i] = tempResults.Average();
+                Console.WriteLine("Number of elements: " + numOfElements[i] + ", Remove operation took: " + results[i] + " ms");
+            }
+        }
+
+        private QuickCollection<int> PopulateCollectionCollection(int numOfElements)
+        {
+            var random = new Random();
+            var maxRandValue = 50000;
+            var comparer = Comparer<int>.Default;
+            var collection = GetInstance<int>(comparer);
+
             for (int i = 0; i < numOfElements; i++)
             {
                 var randInt = random.Next(maxRandValue);
                 collection.Add(randInt);
             }
+
+            return collection;
         }
     }
 }
