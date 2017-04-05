@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoftimizeMasterTests.Mocks
 {
+    /// <summary>
+    /// Mock person object for testing.
+    /// </summary>
     public class Person
     {
         public int Id { get; set; }
