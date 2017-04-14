@@ -1,4 +1,4 @@
-﻿USE [Zza]
+﻿USE [ZzaDB]
 
 /*** Drop Order Tables Script Date: Thu Jun 06 2013 18:37:00 GMT-0700 (Pacific Daylight Time) ***/
 IF OBJECT_ID('[dbo].[OrderItemOption]', 'U') IS NOT NULL
