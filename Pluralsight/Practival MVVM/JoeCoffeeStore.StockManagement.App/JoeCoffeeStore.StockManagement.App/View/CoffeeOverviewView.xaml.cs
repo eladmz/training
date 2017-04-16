@@ -23,6 +23,8 @@ namespace JoeCoffeeStore.StockManagement.App.View
     public partial class CoffeeOverviewView : MetroWindow
     {
         private Coffee selectedCoffee;
+        private List<Coffee> coffees;
+
         public CoffeeOverviewView()
         {
             InitializeComponent();
@@ -33,7 +35,8 @@ namespace JoeCoffeeStore.StockManagement.App.View
         private void LoadData()
         {
             CoffeeDataService coffeeDataService = new CoffeeDataService();
-            CoffeeListView.ItemsSource = coffeeDataService.GetAllCoffees();
+            coffees = coffeeDataService.GetAllCoffees();
+            CoffeeListView.ItemsSource = coffees;
         }
 
         private void EditCoffeeButton_Click(object sender, RoutedEventArgs e)

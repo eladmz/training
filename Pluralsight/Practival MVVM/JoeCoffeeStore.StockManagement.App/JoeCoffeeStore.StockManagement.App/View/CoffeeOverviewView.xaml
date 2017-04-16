@@ -10,9 +10,32 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView Grid.Column="0" Margin="5" DisplayMemberPath="CoffeeName"
-                  Name="CoffeeListView" SelectionChanged="CoffeeListView_SelectionChanged">
-            
+        <ListView Grid.Column="0" Margin="5" Name="CoffeeListView" SelectionChanged="CoffeeListView_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="#CCCCCC" BorderThickness="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="15" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding ImageId}" Grid.RowSpan="2" VerticalAlignment="Center" />
+                            <TextBlock Text="{Binding CoffeeName}" FontSize="14" Grid.Column="1" Grid.ColumnSpan="2" />
+                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="Stock: " />
+                                <TextBlock Text="{Binding AmountInStock}" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding Price}" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="2" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
         <Grid Grid.Column="1" Margin="5">
             <Grid.RowDefinitions>
