@@ -2,9 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:JoeCoffeeStore.StockManagement.App"
+             xmlns:converter="clr-namespace:JoeCoffeeStore.StockManagement.App.Converters"
              StartupUri="View/CoffeeOverviewView.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <local:ViewModelLocator x:Key="mainViewModelLocator"></local:ViewModelLocator>
+            <converter:PriceConverter x:Key="localPriceConverter"></converter:PriceConverter>
+            <converter:ImageConverter x:Key="localImageConverter"></converter:ImageConverter>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />

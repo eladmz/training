@@ -1,29 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace JoeCoffeeStore.StockManagement.Model
 {
-    public class Coffee
+    public class Coffee : INotifyPropertyChanged
     {
-        public int CoffeeId
+        private int coffeeId;
+        private string coffeeName;
+        private int price;
+
+        public int CoffeeId 
         {
-            get;
-            set;
+            get
+            {
+                return coffeeId;
+            }
+            set
+            {
+                coffeeId = value;
+                RaisePropertyChanged("CoffeeId");
+            }
         }
 
         public string CoffeeName
         {
-            get;
-            set;
+            get
+            {
+                return coffeeName;
+            }
+            set
+            {
+                coffeeName = value;
+                RaisePropertyChanged("CoffeeName");
+            }
         }
 
         public int Price
         {
-            get;
-            set;
+            get
+            {
+                return price;
+            }
+            set
+            {
+                price = value;
+                RaisePropertyChanged("Price");
+            }
         }
 
         public string Description
@@ -60,6 +86,16 @@ namespace JoeCoffeeStore.StockManagement.Model
         {
             get;
             set;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void RaisePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

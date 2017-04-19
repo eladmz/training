@@ -59,9 +59,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ImageConverter.cs" />
+    <Compile Include="Converters\PriceConverter.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Messages\UpdateListMessage.cs" />
     <Compile Include="Services\CoffeeDataService.cs" />
+    <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Utility\CustomCommand.cs" />
+    <Compile Include="Utility\Messenger.cs" />
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="ViewModels\CoffeeDetailViewModel.cs" />
+    <Compile Include="ViewModels\CoffeeOverviewViewModel.cs" />
     <Compile Include="View\CoffeeDetailView.xaml.cs">
       <DependentUpon>CoffeeDetailView.xaml</DependentUpon>
     </Compile>

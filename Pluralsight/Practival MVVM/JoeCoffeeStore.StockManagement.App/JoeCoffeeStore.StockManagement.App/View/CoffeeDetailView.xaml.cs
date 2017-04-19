@@ -21,20 +21,20 @@ namespace JoeCoffeeStore.StockManagement.App.View
     /// </summary>
     public partial class CoffeeDetailView : MetroWindow
     {
-        public Coffee SelectedCoffee { get; set; }
+        //public Coffee SelectedCoffee { get; set; }
 
         public CoffeeDetailView()
         {
             InitializeComponent();
 
-            this.Loaded += CoffeeDetailView_Loaded;
+            //this.Loaded += CoffeeDetailView_Loaded;
         }
 
-        void CoffeeDetailView_Loaded(object sender, RoutedEventArgs e)
-        {
-            // LoadData();
-            this.DataContext = SelectedCoffee;
-        }
+        //void CoffeeDetailView_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    // LoadData();
+        //    this.DataContext = SelectedCoffee;
+        //}
 
         //private void LoadData()
         //{
@@ -56,14 +56,20 @@ namespace JoeCoffeeStore.StockManagement.App.View
         //    CoffeeImage.Source = img;
         //}
 
-        private void DeleteCoffeeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        //private void DeleteCoffeeButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Close();
+        //}
 
-        private void SaveCoffeeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        //private void SaveCoffeeButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+        //private void ChangeCoffeeButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    SelectedCoffee.CoffeeName = "Something really expensive";
+        //    SelectedCoffee.Price = 1000;
+        //}
     }
 }
